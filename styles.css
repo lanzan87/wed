@@ -1,0 +1,24 @@
+body {
+    background-color: #00FF00;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    cursor: none;
+}
+h1 {
+    color: #000000;
+    font-size: 36px;
+}
+p {
+    color: #333333;
+    font-size: 18px;
+}
+#custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
