@@ -1,4 +1,11 @@
 /* Reset default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+
 * {
     margin: 0;
     padding: 0;
@@ -40,13 +47,14 @@ body {
     pointer-events: none;
     z-index: 1000;
 }
-
 .leaf {
     position: absolute;
-    width: 20px; /* Adjust size as needed */
+    width: 20px; /* Base size */
+    max-width: 5vw; /* Responsive size, adjust as needed */
     height: auto;
     opacity: 0.7;
-}
+  }
+
 
 
 h1 {

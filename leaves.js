@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const leaf = document.createElement('img');
         leaf.src = 'leaf1.png'; // Make sure this path is correct
         leaf.classList.add('leaf');
-        
+          // Set a maximum size
+  const maxSize = Math.min(window.innerWidth * 0.05, 40); // 5% of screen width, max 40px
+  leaf.style.width = maxSize + 'px';
         // Random starting position
         leaf.style.left = Math.random() * 100 + 'vw';
         leaf.style.top = -50 + 'px';
