@@ -1,45 +1,76 @@
 body {
+    font-family: 'Cormorant Garamond', serif;
     background-color: #069460;
-    font-family: Arial, sans-serif;
     text-align: center;
     padding: 50px;
     cursor: none;
+    font-size: 24px; /* Increased base font size */
 }
+
 h1 {
-    color: #000000;
-    font-size: 36px;
+    font-weight: 700;
+    font-size: 64px; /* Larger title */
+    margin-bottom: 20px;
 }
+
+h2 {
+    font-weight: 700;
+    font-size: 48px; /* Larger secondary headings */
+}
+
 p {
     color: #333333;
-    font-size: 18px;
+    font-size: 28px; /* Larger paragraph text */
 }
+
 #custom-cursor {
-    font-size: 24px; /* Adjust size as needed */
+    font-size: 36px; /* Larger cursor */
     position: fixed;
     pointer-events: none;
     z-index: 9999;
-    transform: translate(-50%, -50%); /* Center the cursor on the pointer */
-    user-select: none; /* Prevent text selection */
+    transform: translate(-50%, -50%);
+    user-select: none;
 }
+
 .title-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .title-gif {
-    width: 50px;  /* Adjust as needed */
+    width: 100px; /* Larger GIFs */
     height: auto;
 }
 
 .left-gif {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .right-gif {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
-body {
-    cursor: none;
+.date-info {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.calendar-gif {
+    width: 100px; /* Larger calendar GIF */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.date-info h2 {
+    margin: 20px 0;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: 32px; /* Larger subtitle */
+    line-height: 1.5;
 }
