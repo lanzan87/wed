@@ -114,6 +114,44 @@ p {
     opacity: 0.7;
 }
 
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
+    transform: scale(0);
+    animation: ripple-animation 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    pointer-events: none;
+  }
+  
+  @keyframes ripple-animation {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(0.2);
+      opacity: 0.8;
+    }
+    40% {
+      transform: scale(0.3);
+      opacity: 0.6;
+    }
+    60% {
+      transform: scale(0.4);
+      opacity: 0.4;
+    }
+    80% {
+      transform: scale(0.5);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+  }
+  
+  
+
 /* Media query for larger screens */
 @media screen and (min-width: 768px) {
     body {
