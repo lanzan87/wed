@@ -1,26 +1,23 @@
-/* Reset default styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100%;
-}
-
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Reset additional elements as needed */
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
+body, html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
-ol, ul {
-    list-style: none;
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #069460;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -28,17 +25,77 @@ img {
     height: auto;
 }
 
-body {
-    font-family: 'Cormorant Garamond', serif;
-    background-color: #069460;
-    text-align: center;
-    padding: 15px;
-    cursor: none;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.4;
+/* Typography */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* Layout components */
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.gif-image {
+    width: 80px;
+    height: auto;
+    margin: 10px 0;
+}
+
+.text-content {
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.footer-gif {
+    height: 60px;
+    margin: 10px;
+}
+
+/* Custom cursor */
+#custom-cursor {
+    font-size: 24px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+/* Leaves container */
 #leaves-container {
     position: fixed;
     top: 0;
@@ -57,80 +114,7 @@ body {
     opacity: 0.7;
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-weight: 700;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-p {
-    color: #333333;
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-#custom-cursor {
-    font-size: 24px;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
-
-.title-container, .date-container, .dress-code-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.title-gif, .calendar-gif, .dress-code-gif {
-    width: 50px;
-    height: auto;
-    margin: 5px 0;
-}
-
-.date-info, .dress-code-info {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.date-text, .dress-code-text {
-    text-align: center;
-    width: 100%;
-}
-
-.subtitle {
-    text-align: center;
-    margin: 15px 0;
-    font-style: italic;
-    font-size: 18px;
-    line-height: 1.4;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.footer-gif {
-    height: 50px;
-    width: auto;
-    margin: 5px;
-}
-
-/* Media Queries for larger screens */
+/* Media query for larger screens */
 @media screen and (min-width: 768px) {
     body {
         font-size: 24px;
@@ -138,79 +122,36 @@ p {
     }
 
     h1 {
-        font-weight: 700;
         font-size: 64px;
-        margin-bottom: 20px;
     }
 
     h2 {
-        font-weight: 700;
         font-size: 48px;
     }
 
     p {
-        color: #333333;
         font-size: 28px;
     }
 
     .subtitle {
-        text-align: center;
-        margin: 30px 0;
-        font-style: italic;
         font-size: 32px;
-        line-height: 1.5;
     }
 
-    #custom-cursor {
-        font-size: 36px;
-    }
-
-    .title-container, .date-container, .dress-code-container {
+    .flex-container {
         flex-direction: row;
+        justify-content: center;
     }
 
-    .title-gif, .calendar-gif, .dress-code-gif {
+    .gif-image {
         width: 100px;
-        margin: 0 10px;
+        margin: 0 20px;
     }
 
-    .date-text, .dress-code-text {
+    .text-content {
         text-align: left;
     }
 
     .footer-gif {
         height: 100px;
-    }
-}
-
-/* Additional media query for very small screens */
-@media screen and (max-width: 320px) {
-    body {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    .subtitle {
-        font-size: 16px;
-    }
-
-    .title-gif, .calendar-gif, .dress-code-gif {
-        width: 40px;
-    }
-
-    .footer-gif {
-        height: 40px;
     }
 }
